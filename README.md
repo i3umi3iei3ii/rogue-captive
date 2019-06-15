@@ -18,3 +18,18 @@ During installation, macchanger will ask whether or not MAC addresses should be 
 After reboot, look for an access point named "Google Free Wi-Fi." Connecting to it from an Apple or Android device should automatically bring up a captive portal login screen.
 
 Credentials are logged in `/var/www/html/creds.txt`.
+
+
+Starting accesspoint
+
+ ```
+ chmod +x /etc/rc.local
+ /etc/rc.local
+ ```
+
+If cannot start the access point, run these command
+
+```
+airmon-ng check
+killall wpa_supplicant
+```
