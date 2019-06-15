@@ -8,6 +8,7 @@ ifconfig wlan0 up
 sleep 1
 hostapd -B /etc/hostapd/hostapd.conf
 sleep 2
+ip link add name br0 type bridge
 ifconfig br0 up
 ifconfig br0 10.1.1.1 netmask 255.255.255.0
 sysctl net.ipv4.ip_forward=1
